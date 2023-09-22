@@ -18,6 +18,14 @@
 .cards    
     display: flex
     gap: 62px
+    @include md
+        width: 100%
+        justify-content: space-between
+        gap: 20px
+    @include sm
+        flex-direction: column
+        align-items: center
+        gap: 30px            
 
 .card
     width: 363px
@@ -30,6 +38,12 @@
     border-radius: 44px
     background:  linear-gradient(300deg, #F5F2EB 1.26%, #F7E6CB 100.49%)
     box-shadow: 5px 5px 13px 0px #DD8762
+    @include sm
+        width: 60%
+    @include xs
+        width: 80%
+    @include xxs
+        width: 100%        
     &__img-box        
         width: 76px
         height: 76px
@@ -41,8 +55,8 @@
             border-radius: 10px
     &__title
         font-family: $roboto-b
-        font-size: 17.864px
-        line-height: 146.687%
+        font-size: 18px
+        line-height: 147%
         color: $dark-color-5
         padding-bottom: 10px
         padding-top: 15px
@@ -50,15 +64,15 @@
             color: $black-color
     &__text
         font-family: $poppins-m
-        font-size: 16.67px
-        line-height: 146.7%
+        font-size: 17px
+        line-height: 147%
         color: $dark-color-4
         max-width: 290px
         text-align: center
         &_style_bold
             font-family: $roboto-m
-            font-size: 14.57px
-            line-height: 161.2%
+            font-size: 15px
+            line-height: 161%
             color: $black-color
 
 .btn-link
@@ -66,8 +80,8 @@
     align-items: center
     justify-content: center
     font-family: $roboto-b
-    font-size: 14.129px
-    line-height: 146.687% 
+    font-size: 14px
+    line-height: 147% 
     border-radius: 8px
     padding-top: 9px
     padding-bottom: 10px                
@@ -90,47 +104,67 @@
     display: flex
     align-items: center
     justify-content: left
+    @include xxs
+            flex-direction: column
     &__input        
         font-family: $poppins-reg        
-        line-height: 146.687%
+        line-height: 147%
         color: $dark-color-9
         border-radius: 8px 0px 0px 8px       
         background: $white-color
         outline: none
         box-sizing: border-box
+        @include xxs
+            border-radius: 8px 8px 0px 0px
         &_size_small
             flex-basis: calc(100% - 148px)
             padding-top: 11px
             padding-bottom: 10px
             padding-left: 18px
-            font-size: 10.488px
-            border: 0.331px solid $bright-color-2
+            font-size: 10px
+            border: 0.3px solid $bright-color-2
             border-right: none
+            @include xxs
+                    width: 100%
+                    border: 0.3px solid $bright-color-2
+                    border-bottom: none
         &_size_big
             flex-basis: calc(100% - 210px)
             padding: 20px 0px 20px 27px
-            font-size: 15.86px
+            font-size: 16px
             border: 0.5px solid $bright-color-2
             border-right: none
+            @include xxs
+                    width: 100%
+                    border: 0.3px solid $bright-color-2
+                    border-bottom: none
     &__btn        
         flex-shrink: 0
         font-family: $poppins-reg        
-        line-height: 146.687%
+        line-height: 147%
         color: $white-color        
         border-radius: 0px 8px 8px 0px
         background: $bright-color-2
         cursor: pointer
         box-sizing: border-box
+        @include xxs
+                border-radius: 0px 0px 8px 8px
         &_size_small
             flex-basis: 148px
-            font-size: 13.792px
+            font-size: 14px
             padding-top: 10.2px
             padding-bottom: 9.5px
+            @include xxs
+                    width: 100%
+                    flex-basis: 39px
         &_size_big
             flex-basis: 210px
-            font-size: 20.857px
+            font-size: 21px
             padding-top: 18px
-            padding-bottom: 18px  
+            padding-bottom: 18px
+            @include xxs
+                    width: 100%
+                    flex-basis: 39px  
         &:hover        
             background: $dark-color-9
             transition: background 0.4s ease            
@@ -210,13 +244,21 @@
     padding-top: 84px
     padding-bottom: 115px
     max-width: 1212px
+    width: 100%
+    @include xxs
+        padding-top: 50px
+        padding-bottom: 50px
 
 .share
     margin-bottom: 115px
+    @include xxs
+        margin-bottom: 50px
     &__wrap
         display: flex
         align-items: center        
         gap:80px
+        @include xs
+            flex-direction: column
     &__thumb
         max-width: 514px
     &__content
@@ -226,25 +268,32 @@
         padding-bottom: 17px
     &__text
         font-family: $poppins-m
-        font-size: 16.67px
-        line-height: 146.7%
+        font-size: 17px
+        line-height: 147%
         color: $dark-color-4
         max-width: 457px
 
 .prop
-    max-width: 1213px
-    border-radius: 48.7px
-    background: linear-gradient(300deg, #F5F2EB 1.26%, #F7E6CB 100.49%)
-    box-shadow: 5.53883px 5.53883px 28.8019px 0px #DD8762
-    padding-top: 136px
-    padding-bottom: 134px
-    padding-left: 90px
-    padding-right: 90px
+    max-width: 1213px   
     margin-bottom: 115px
+    @include xxs
+        margin-bottom: 50px
     &__wrap
         display: flex
         align-items: center
         gap:144px
+        border-radius: 49px
+        background: linear-gradient(300deg, #F5F2EB 1.26%, #F7E6CB 100.49%)
+        box-shadow: 5.53883px 5.53883px 28.8019px 0px #DD8762
+        padding-top: 136px
+        padding-bottom: 134px
+        padding-left: 90px
+        padding-right: 90px
+        @include md
+            padding: 30px
+            gap: 30px
+        @include xs
+            flex-direction: column-reverse    
     &__content
         max-width: 389px
         display: flex
@@ -265,14 +314,16 @@
         flex-basis: calc(100% - 57px)    
     &__title
         font-family: $poppins-b
-        font-size: 17.359px
-        line-height: 148.2%
+        font-size: 17px
+        line-height: 148%
         color: $dark-color-5   
     &__text
         font-family: $poppins-m
-        font-size: 16.67px
-        line-height: 148.2%
+        font-size: 17px
+        line-height: 148%
         color: $dark-color-4
+        @include sm
+            font-size: 15px
 
 .security
     display: flex
@@ -280,45 +331,59 @@
     align-items: center
     text-align: center
     padding-bottom: 115px
+    @include xxs
+        padding-bottom: 50px
     &__title
         color: $black-color
         padding-bottom: 15px
+        margin: 0 auto      
     &__subtitle
         max-width: 600px
         font-family: $roboto-m
-        font-size: 16.67px
-        line-height: 148.2%
+        font-size: 17px
+        line-height: 148%
         color: $dark-color-6
         padding-bottom: 100px
+        margin: 0 auto
+        @include xs
+            padding-bottom: 50px        
     &__wrap
         display: flex
         align-items: center
         justify-content: center
-        gap: 166px        
+        gap: 166px
+        @include md
+            gap: 50px
+        @include xs
+            flex-direction: column            
     &__thumb
     &__content
         flex-basis: 468px
         text-align: left
+        @include xs
+            flex-basis: 100%
     &__content-title        
         font-family: $poppins-b
-        font-size: 19.705px
-        line-height: 148.2%
+        font-size: 20px
+        line-height: 148%
         color: $black-color
-        letter-spacing: 0.591px
+        letter-spacing: 0.6px
         padding-bottom: 15px
     &__text
         font-family: $poppins-m
-        font-size: 14.736px
-        line-height: 148.2%
+        font-size: 15px
+        line-height: 148%
         color: $dark-color-6
-        letter-spacing: 0.442px
+        letter-spacing: 0.4px
         padding-bottom: 15px          
 
 .automation
     padding-bottom: 116px
-    max-width: 1213px  
+    max-width: 1213px
+    @include xxs
+        padding-bottom: 50px
     &__wrap
-        border-radius: 48.742px
+        border-radius: 49px
         background: linear-gradient(300deg, #F5F2EB 1.26%, #F7E6CB 100.49%)
         box-shadow: 5.53883px 5.53883px 28.8019px 0px #DD8762
         display: flex
@@ -327,8 +392,14 @@
         gap: 80px
         padding-bottom: 146px
         padding-top: 116px
+        @include md
+            padding: 30px
+        @include xs
+            flex-direction: column-reverse
     &__content
         flex-basis: 459px
+        @include xs
+            flex-basis: 100%
     &__title
         padding-bottom: 15px
         color: $black-color        
@@ -336,8 +407,8 @@
         padding-bottom: 19px
         max-width: 395px
         font-family: $roboto-m
-        font-size: 16.67px
-        line-height: 148.2% 
+        font-size: 17px
+        line-height: 148% 
         color: $dark-color-6    
     &__info-box
         width: 299px
@@ -364,40 +435,61 @@
         flex-direction: column
     &__info-title
         font-family: $roboto-b
-        font-size: 15.725px
-        line-height: 153.2%
+        font-size: 16px
+        line-height: 153%
         color: $black-color
     &__info-text
         font-family: $roboto-m
-        font-size: 14.736px
-        line-height: 153.2% 
+        font-size: 15px
+        line-height: 153% 
         color: $black-color                    
 
 .price
     padding-bottom: 80px
+    @include sm
+        padding-bottom: 0px
     &__wrap
         display: flex
         align-items: center
         justify-content: center
         gap: 114px
+        @include sm
+            flex-direction: column
     &__thumb-wrap
-        height: 544px    
+        height: 544px
+        @include xxs
+            height: 100%    
     &__thumb
         width: 544px
         height: 272px
         position: relative
         border-radius: 50% 50% 0 0 / 100% 100% 0 0
         background: radial-gradient(50% 50% at 50% 50%, #F3FCFF 0%, #F3FCFF 0.01%, #FE9563 100%)
+        @include xxs
+            width: 340px
+            height: 170px 
     &__img
         position: absolute
+        @include xxs
+            width: 150px
         &_position_left
             top: 150px
             left: 45px
+            @include xxs
+                top: 70px
+                left: 30px
         &_position_right       
             top: 100px
             left: 255px
+            @include xxs
+                top:30px
+                left: 180px
     &__content
-        flex-basis: 460px 
+        flex-basis: 460px
+        @include sm
+            flex-basis: 100%
+        @include xxs
+            padding-top: 100px     
     &__title
         color: $dark-color-1
         padding-bottom: 15px
@@ -416,29 +508,32 @@
         gap: 10px            
 
 .better
+    width: 100%
     padding-bottom: 86px
     padding-top: 79px
+    @include xxs
+        padding-bottom: 50px
+        padding-top: 50px
     &__wrap
         display: flex
         flex-direction: column
         align-items: center
-        text-align: center
+        text-align: center        
     &__title
         padding-bottom: 15px
     &__subtitle
         max-width: 600px
         font-family: $roboto-m
-        font-size: 16.67px
-        line-height: 148.2%
+        font-size: 17px
+        line-height: 148%
         color: $dark-color-6
-        padding-bottom: 74px             
-    &__cards
-        display: flex
-        gap: 62px
+        padding-bottom: 74px
 
 .keep
     padding-bottom: 103px
-    max-width: 1213px   
+    max-width: 1213px
+    @include xxs
+        padding-bottom: 50px
     &__wrap
         display: flex
         gap: 122px
@@ -446,14 +541,29 @@
         justify-content: center
         padding-bottom: 72px
         padding-top: 72px
+        padding-right: 131px
+        padding-left: 103px
         border-radius: 44px
         background: linear-gradient(102deg, #F7E6CB 0%, #F5F2EB 100%)
         box-shadow: 5.54px 5.54px 28.8px 0px #DD8762
+        @include md
+            padding-left: 20px
+            padding-right: 20px
+            width: 100%
+        @include sm
+            gap: 100px
+        @include xs
+            gap: 30px            
+            flex-direction: column-reverse
+            padding-top: 50px
+            padding-bottom: 50px            
     &__content
-        flex-basis: 457px    
+        flex-basis: 457px
+        @include sm
+            flex-basis: 100%
     &__title
         font-family: $poppins-b
-        font-size: 38.399px
+        font-size: 38px
         line-height: 126%
         color: $dark-color-2
         padding-bottom: 15px
@@ -463,12 +573,16 @@
         gap: 13px
     &__text
         font-family: $poppins-m
-        font-size: 16.67px
-        line-height: 148.2%
+        font-size: 17px
+        line-height: 148%
         color: $dark-color-2
         letter-spacing: 0.5px
+        @include xxs
+            font-size: 14px
     &__thumb
-        flex-basis: 600px     
+        flex-basis: 600px
+        @include sm
+            flex-basis: 100%     
 
 .moments
     padding-bottom: 108px
@@ -527,6 +641,8 @@
         background: linear-gradient(102deg, #F7E6CB 0%, #F5F2EB 100%)
         box-shadow: 5.54px 5.54px 28.8px 0px #DD8762
         padding: 38px 30px 46px 30px
+        @include md
+            min-width: 100%
     &__title
         padding-bottom: 15px
         color: $black-color
@@ -542,28 +658,55 @@
 .advantages
     padding-top: 120px  
     padding-bottom: 163px
+    @include sm
+        padding-top: 100px
+        padding-bottom: 100px
+    @include xxs
+        padding-bottom: 50px
+        padding-top: 50px
     &__wrap
         display: flex
         align-items: center
         justify-content: center
         gap:88px
+        @include md
+            gap:50px
+        @include sm
+            flex-direction: column-reverse
+            gap: 100px            
     &__thumb
         position: relative
         width: 488px
         height: 488px
         border-radius: 100%        
-        background: radial-gradient(50% 50% at 50% 50%, #F3FCFF 0%, #F3FCFF 0.01%, #FE9563 100%)     
+        background: radial-gradient(50% 50% at 50% 50%, #F3FCFF 0%, #F3FCFF 0.01%, #FE9563 100%)
+        @include xxs
+            width: 340px
+            height: 340px
     &__img  
         position: absolute
         top: 65px
         left: 95px
+        @include xxs
+            width: 160px
+            top: 90px
+            left: 100px                
         &_position_top
             z-index: 2
         &_position_bottom    
             top: 98px
             left: 210px
+            @include xxs
+                top: 70px
+                left: 150px
     &__content
         flex-basis: 426px
+        @include sm
+            flex-basis: 100%
+            max-width: calc( 100% - 200px )
+        @include xs
+            max-width: 100%
+            padding-top: 30px    
     &__title
         color: $black-color
         padding-bottom: 18px
@@ -581,6 +724,8 @@
 
 .stat
     padding-bottom: 104px
+    @include xxs
+        padding-bottom: 50px
     &__wrap
         display: flex
         flex-direction: column
@@ -588,7 +733,9 @@
     &__title
         max-width: 630px
         color: $dark-color-7
-        padding-bottom: 50px      
+        padding-bottom: 50px
+        @include xs
+                text-align: center      
     &__content
         max-width: 1246px
         border-radius: 44px
@@ -600,6 +747,15 @@
         padding-bottom: 66px
         padding-left: 155px
         padding-right: 155px
+        @include md
+            padding: 30px
+            gap: 0px
+            justify-content: space-between
+        @include xs
+            flex-direction: column
+            align-items: center    
+            text-align: center
+            gap: 30px
     &__text
         max-width: 465px
         font-family: $poppins-sb
@@ -607,11 +763,18 @@
         line-height: 135%
         color: $black-color
         letter-spacing: 0.299px
+        @include sm
+            font-size: 25px
+            flex-basis: 50%
+        @include xs
+            flex-basis: 100% 
     &__stat
         flex-basis: 157px
         display: flex
         flex-direction: column
         gap: 5px
+        @include xs
+            flex-basis: 100% 
     &__rating        
         display: flex
         flex-direction: column
@@ -635,12 +798,16 @@
 .questions
     padding-bottom: 93px
     max-width: 1070px
+    @include xxs
+        padding-bottom: 50px
     &__wrap
         display: flex
         flex-direction: column               
     &__title
-      padding-bottom: 36px
-      align-self: center
+        padding-bottom: 36px
+        align-self: center
+        @include xs
+                text-align: center 
     &__subtitle
         align-self: center
         text-align: center
@@ -657,6 +824,8 @@
         row-gap: 18px
         column-gap: 60px
         padding-bottom: 19px
+        @include xs
+            grid-template-columns: 1fr  
     &__list-item-title    
         font-family: $poppins-b
         font-size: 17.977px
@@ -666,29 +835,45 @@
         max-width: 1041px    
 
 .unlimited
-    max-width: 1246px
-    padding-top: 74px
-    padding-bottom: 58px
-    border-radius: 44px
-    background: linear-gradient(102deg, #F7E6CB 0%, #F5F2EB 100%)
-    box-shadow: 15px 15px 26px 0px #DD8762
     margin-bottom: 113px
+    @include xxs
+        margin-bottom: 50px
     &__wrap
+        max-width: 1246px
+        padding-top: 74px
+        padding-bottom: 58px
+        padding-left: 20px
+        padding-right: 20px
+        border-radius: 44px
+        background: linear-gradient(102deg, #F7E6CB 0%, #F5F2EB 100%)
+        box-shadow: 15px 15px 26px 0px #DD8762
         display: flex
         align-items: center
         justify-content: center
         gap: 165px
+        @include sm
+            gap: 100px
+        @include xs
+            gap: 30px
+        @include xxs
+            flex-direction: column
+            padding-top: 50px
+            padding-bottom: 50px            
     &__content    
         flex-basis: 500px
+        @include xxs
+            flex-basis: 100%
     &__title
         color: $black-color
         padding-bottom: 15px
     &__text
         font-family: $poppins-m
-        font-size: 16.67px
-        line-height: 153.2%
+        font-size: 17px
+        line-height: 153%
         letter-spacing: 0.5px
         color: $dark-color-6
+        @include xxs
+            font-size: 14px
     &__links-wrap
         padding-top: 20px
         padding-bottom: 21px
@@ -696,8 +881,8 @@
         gap: 10px
     &__captions
         font-family: $roboto-m
-        font-size: 11.351px
-        line-height: 153.2%        
+        font-size: 11px
+        line-height: 153%        
         color: $black-color
         margin-bottom: 23px        
     &__captions span:not(:last-child)
@@ -712,23 +897,31 @@
         display: flex        
         justify-content: center
         gap:42px
+        @include sm
+            gap: 22px
+        @include xs
+            flex-direction: column        
     &__left
         flex-basis: 303px
+        @include sm
+            flex-basis: 100%
     &__logo
         display: flex
         align-items: baseline        
         padding-bottom: 10px
     &__logo-title
         font-family: $istok
-        font-size: 27.696px
+        font-size: 28px
         line-height: 100%
         color: $dark-color-8 
     &__text  
         font-family: $poppins-m
-        font-size: 16.67px
-        line-height: 153.2%
+        font-size: 17px
+        line-height: 153%
         color: $dark-color-6
         padding-bottom: 17px
+        @include sm
+            font-size: 14px
     &__right
         display: flex
         flex-direction: column
@@ -736,11 +929,15 @@
     &__nav-wrap
         display: flex
         gap: 66px
+        @include sm
+            gap:45px
+        @include xs
+            flex-wrap: wrap        
     &__nav-item
     &__nav-title
         font-family: $poppins-b
-        font-size: 14.933px
-        line-height: 153.2%
+        font-size: 15px
+        line-height: 153%
         color: $black-color
         padding-bottom: 15px
     &__link-list
@@ -749,8 +946,8 @@
       gap: 7px
     &__link         
         font-family: $poppins-reg
-        font-size: 14.199px
-        line-height: 153.2%
+        font-size: 14px
+        line-height: 153%
         color: $dark-color-6
         position: relative
         &::after
