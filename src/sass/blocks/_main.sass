@@ -1,0 +1,772 @@
+.page
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.download
+    display: flex
+    align-items: center
+    gap: 13px    
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__link:hover
+        transform: scale(1.05)
+        transition: transform 0.4s ease
+
+.cards    
+    display: flex
+    gap: 62px
+
+.card
+    width: 363px
+    min-height:  280px
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-top: 40px
+    padding-bottom: 40px
+    border-radius: 44px
+    background:  linear-gradient(300deg, #F5F2EB 1.26%, #F7E6CB 100.49%)
+    box-shadow: 5px 5px 13px 0px #DD8762
+    &__img-box        
+        width: 76px
+        height: 76px
+        background-color: $bright-color-3        
+        display: flex
+        align-items: center
+        justify-content: center
+        &_style_rounded
+            border-radius: 10px
+    &__title
+        font-family: $roboto-b
+        font-size: 17.864px
+        line-height: 146.687%
+        color: $dark-color-5
+        padding-bottom: 10px
+        padding-top: 15px
+        &_style_dark        
+            color: $black-color
+    &__text
+        font-family: $poppins-m
+        font-size: 16.67px
+        line-height: 146.7%
+        color: $dark-color-4
+        max-width: 290px
+        text-align: center
+        &_style_bold
+            font-family: $roboto-m
+            font-size: 14.57px
+            line-height: 161.2%
+            color: $black-color
+
+.btn-link
+    display: flex
+    align-items: center
+    justify-content: center
+    font-family: $roboto-b
+    font-size: 14.129px
+    line-height: 146.687% 
+    border-radius: 8px
+    padding-top: 9px
+    padding-bottom: 10px                
+    &_theme_light
+        color: $black-color            
+        border: 2px solid $bright-color
+        min-width: 149px
+        &:hover        
+            border-color: $dark-color-9
+            transition: border-color 0.4s ease          
+    &_theme_bright 
+        color: $light-color-2
+        background: $bright-color
+        min-width: 160px
+        &:hover        
+            background: $dark-color-9
+            transition: background 0.4s ease 
+
+.form
+    display: flex
+    align-items: center
+    justify-content: left
+    &__input        
+        font-family: $poppins-reg        
+        line-height: 146.687%
+        color: $dark-color-9
+        border-radius: 8px 0px 0px 8px       
+        background: $white-color
+        outline: none
+        box-sizing: border-box
+        &_size_small
+            flex-basis: calc(100% - 148px)
+            padding-top: 11px
+            padding-bottom: 10px
+            padding-left: 18px
+            font-size: 10.488px
+            border: 0.331px solid $bright-color-2
+            border-right: none
+        &_size_big
+            flex-basis: calc(100% - 210px)
+            padding: 20px 0px 20px 27px
+            font-size: 15.86px
+            border: 0.5px solid $bright-color-2
+            border-right: none
+    &__btn        
+        flex-shrink: 0
+        font-family: $poppins-reg        
+        line-height: 146.687%
+        color: $white-color        
+        border-radius: 0px 8px 8px 0px
+        background: $bright-color-2
+        cursor: pointer
+        box-sizing: border-box
+        &_size_small
+            flex-basis: 148px
+            font-size: 13.792px
+            padding-top: 10.2px
+            padding-bottom: 9.5px
+        &_size_big
+            flex-basis: 210px
+            font-size: 20.857px
+            padding-top: 18px
+            padding-bottom: 18px  
+        &:hover        
+            background: $dark-color-9
+            transition: background 0.4s ease            
+
+.promo
+    width: 100vw
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-top: 80px
+    padding-bottom: 98px
+    //background: linear-gradient(178deg, #FFFBF0 4.22%, #F7E6CC 98.53%)
+    background: url('../img/gradient_bg.png') no-repeat     
+    background-size: 100%
+    background-position-y: 100%
+    &__bg
+        width: 100vw
+        background: url("../icons/promo__bg_map.svg") no-repeat
+        background-position-x: 55%
+        background-position-y: 55%
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: center
+        gap:87px        
+        //max-width: 1184px               
+    &__title
+        color: $dark-color-3
+        padding-bottom: 17px
+        max-width: 414px
+    &__text
+        font-family: $poppins-sb
+        font-size: 16.665px
+        line-height: 146.687%
+        color: $dark-color-4
+        padding-bottom: 26px
+        max-width: 449px
+    &__links
+        display: flex
+        align-items: center
+        gap: 10px
+        margin-bottom: 16px    
+    &__btn
+        color: $light-color-2
+        font-family: $poppins-b
+        font-size: 14.129px
+        line-height: 146.687%
+        background: $dark-color-3
+        border-radius: 6px
+        padding: 9px 25px
+        &:hover
+            background: $bright-color-2
+            transition: background 0.4s ease 
+    &__link
+        font-family: $poppins-b
+        font-size: 14.129px
+        line-height: 146.687%
+        color: $dark-color-3
+        display: flex
+        align-items: center
+        gap: 6px
+        &:hover
+            color: $bright-color-2
+            transition: color 0.4s ease           
+    &__info
+        font-family: $poppins-b
+        font-size: 12.46px
+        line-height: 146.687%
+        color: $dark-color-3
+    &__info span:not(:last-child)                 
+        border-right: 2px solid $bright-color-3
+    &__info-item        
+        padding-right: 6px
+        padding-left: 6px 
+
+.features
+    padding-top: 84px
+    padding-bottom: 115px
+    max-width: 1212px
+
+.share
+    margin-bottom: 115px
+    &__wrap
+        display: flex
+        align-items: center        
+        gap:80px
+    &__thumb
+        max-width: 514px
+    &__content
+        max-width: 457px
+    &__title
+        color: $dark-color-3
+        padding-bottom: 17px
+    &__text
+        font-family: $poppins-m
+        font-size: 16.67px
+        line-height: 146.7%
+        color: $dark-color-4
+        max-width: 457px
+
+.prop
+    max-width: 1213px
+    border-radius: 48.7px
+    background: linear-gradient(300deg, #F5F2EB 1.26%, #F7E6CB 100.49%)
+    box-shadow: 5.53883px 5.53883px 28.8019px 0px #DD8762
+    padding-top: 136px
+    padding-bottom: 134px
+    padding-left: 90px
+    padding-right: 90px
+    margin-bottom: 115px
+    &__wrap
+        display: flex
+        align-items: center
+        gap:144px
+    &__content
+        max-width: 389px
+        display: flex
+        flex-direction: column
+        gap: 18px
+    &__item
+        display: flex
+        gap:13px         
+    &__img-box
+        flex-basis: 57px              
+        height: 57px
+        background-color: $bright-color-2
+        border-radius: 8px
+        display: flex
+        align-items: center
+        justify-content: center
+    &__caption
+        flex-basis: calc(100% - 57px)    
+    &__title
+        font-family: $poppins-b
+        font-size: 17.359px
+        line-height: 148.2%
+        color: $dark-color-5   
+    &__text
+        font-family: $poppins-m
+        font-size: 16.67px
+        line-height: 148.2%
+        color: $dark-color-4
+
+.security
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    padding-bottom: 115px
+    &__title
+        color: $black-color
+        padding-bottom: 15px
+    &__subtitle
+        max-width: 600px
+        font-family: $roboto-m
+        font-size: 16.67px
+        line-height: 148.2%
+        color: $dark-color-6
+        padding-bottom: 100px
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 166px        
+    &__thumb
+    &__content
+        flex-basis: 468px
+        text-align: left
+    &__content-title        
+        font-family: $poppins-b
+        font-size: 19.705px
+        line-height: 148.2%
+        color: $black-color
+        letter-spacing: 0.591px
+        padding-bottom: 15px
+    &__text
+        font-family: $poppins-m
+        font-size: 14.736px
+        line-height: 148.2%
+        color: $dark-color-6
+        letter-spacing: 0.442px
+        padding-bottom: 15px          
+
+.automation
+    padding-bottom: 116px
+    max-width: 1213px  
+    &__wrap
+        border-radius: 48.742px
+        background: linear-gradient(300deg, #F5F2EB 1.26%, #F7E6CB 100.49%)
+        box-shadow: 5.53883px 5.53883px 28.8019px 0px #DD8762
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 80px
+        padding-bottom: 146px
+        padding-top: 116px
+    &__content
+        flex-basis: 459px
+    &__title
+        padding-bottom: 15px
+        color: $black-color        
+    &__text
+        padding-bottom: 19px
+        max-width: 395px
+        font-family: $roboto-m
+        font-size: 16.67px
+        line-height: 148.2% 
+        color: $dark-color-6    
+    &__info-box
+        width: 299px
+        display: flex
+        gap: 17px
+        align-items: center
+        padding-top: 13px
+        padding-bottom: 17px
+        padding-left: 16px
+        border-radius: 13px
+        background: $white-color
+        box-shadow: 0px 9px 17px 0px rgba(0, 0, 0, 0.09)
+        margin-bottom: 23px
+    &__icon-box
+        width: 33px
+        height: 33px
+        background: $bright-color-2
+        border-radius: 5px
+        display: flex
+        align-items: center
+        justify-content: center
+    &__info
+        display: flex
+        flex-direction: column
+    &__info-title
+        font-family: $roboto-b
+        font-size: 15.725px
+        line-height: 153.2%
+        color: $black-color
+    &__info-text
+        font-family: $roboto-m
+        font-size: 14.736px
+        line-height: 153.2% 
+        color: $black-color                    
+
+.price
+    padding-bottom: 80px
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 114px
+    &__thumb-wrap
+        height: 544px    
+    &__thumb
+        width: 544px
+        height: 272px
+        position: relative
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0
+        background: radial-gradient(50% 50% at 50% 50%, #F3FCFF 0%, #F3FCFF 0.01%, #FE9563 100%)
+    &__img
+        position: absolute
+        &_position_left
+            top: 150px
+            left: 45px
+        &_position_right       
+            top: 100px
+            left: 255px
+    &__content
+        flex-basis: 460px 
+    &__title
+        color: $dark-color-1
+        padding-bottom: 15px
+    &__text-wrap
+        display: flex
+        flex-direction: column
+        gap: 10px  
+    &__text
+        font-family: $roboto-m
+        font-size: 16.67px
+        line-height: 148.2%
+        color: $dark-color-6
+    &__links-wrap
+        padding-top: 36px
+        display: flex
+        gap: 10px            
+
+.better
+    padding-bottom: 86px
+    padding-top: 79px
+    &__wrap
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+    &__title
+        padding-bottom: 15px
+    &__subtitle
+        max-width: 600px
+        font-family: $roboto-m
+        font-size: 16.67px
+        line-height: 148.2%
+        color: $dark-color-6
+        padding-bottom: 74px             
+    &__cards
+        display: flex
+        gap: 62px
+
+.keep
+    padding-bottom: 103px
+    max-width: 1213px   
+    &__wrap
+        display: flex
+        gap: 122px
+        align-items: center
+        justify-content: center
+        padding-bottom: 72px
+        padding-top: 72px
+        border-radius: 44px
+        background: linear-gradient(102deg, #F7E6CB 0%, #F5F2EB 100%)
+        box-shadow: 5.54px 5.54px 28.8px 0px #DD8762
+    &__content
+        flex-basis: 457px    
+    &__title
+        font-family: $poppins-b
+        font-size: 38.399px
+        line-height: 126%
+        color: $dark-color-2
+        padding-bottom: 15px
+    &__text-wrap
+        display: flex
+        flex-direction: column
+        gap: 13px
+    &__text
+        font-family: $poppins-m
+        font-size: 16.67px
+        line-height: 148.2%
+        color: $dark-color-2
+        letter-spacing: 0.5px
+    &__thumb
+        flex-basis: 600px     
+
+.moments
+    padding-bottom: 108px
+    &__wrap
+        display: flex
+        flex-direction: column
+        text-align: center
+    &__title
+        color: $black-color
+        padding-bottom: 15px
+    &__subtitle
+        max-width: 600px
+        align-self: center
+        font-family: $roboto-m
+        font-size: 16.67px
+        line-height: 148.2%
+        letter-spacing: 0.5px
+        color: $dark-color-6
+        padding-bottom: 74px   
+    &__link
+        padding-top: 10px
+        padding-bottom: 9px
+        padding-left: 32px
+        padding-right: 32px
+        background: $bright-color-2
+        border-radius: 8px
+        color: $white-color
+        font-family: $roboto-b
+        font-size: 14.129px
+        line-height: 146.687%
+        &:hover        
+            background: $dark-color-9
+            transition: background 0.4s ease    
+
+    &__info
+      padding-top: 25px
+    &__info-item        
+        font-family: $roboto-b
+        font-size: 13.389px
+        line-height: 146.687%        
+        color: $black-color                
+    &__info-item:not(:last-child)
+        padding-right: 7px                 
+        border-right: 2px solid $black-color
+    &__info-item:not(:first-child)
+        padding-left: 2px                         
+
+.stories
+    display: flex
+    &__wrap
+        display: flex
+        flex-direction: column
+        text-align: center
+        min-width: 1246px
+        border-radius: 44px
+        background: linear-gradient(102deg, #F7E6CB 0%, #F5F2EB 100%)
+        box-shadow: 5.54px 5.54px 28.8px 0px #DD8762
+        padding: 38px 30px 46px 30px
+    &__title
+        padding-bottom: 15px
+        color: $black-color
+    &__subtitle
+        align-self: center
+        max-width: 625px
+        font-family: $roboto-m
+        font-size: 16.67px
+        line-height: 148.2%
+        color: $dark-color-6
+        padding-bottom: 25px
+
+.advantages
+    padding-top: 120px  
+    padding-bottom: 163px
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: center
+        gap:88px
+    &__thumb
+        position: relative
+        width: 488px
+        height: 488px
+        border-radius: 100%        
+        background: radial-gradient(50% 50% at 50% 50%, #F3FCFF 0%, #F3FCFF 0.01%, #FE9563 100%)     
+    &__img  
+        position: absolute
+        top: 65px
+        left: 95px
+        &_position_top
+            z-index: 2
+        &_position_bottom    
+            top: 98px
+            left: 210px
+    &__content
+        flex-basis: 426px
+    &__title
+        color: $black-color
+        padding-bottom: 18px
+    &__text-wrap
+        display: flex
+        flex-direction: column
+        gap: 18px
+        padding-bottom: 37px    
+    &__text
+        font-family: $roboto-m
+        font-size: 16.67px
+        line-height: 148.2%
+        color: $dark-color-6
+        letter-spacing: 0.5px
+
+.stat
+    padding-bottom: 104px
+    &__wrap
+        display: flex
+        flex-direction: column
+        align-items: center        
+    &__title
+        max-width: 630px
+        color: $dark-color-7
+        padding-bottom: 50px      
+    &__content
+        max-width: 1246px
+        border-radius: 44px
+        background: linear-gradient(102deg, #F7E6CB 0%, #F5F2EB 100%)
+        box-shadow: 15px 15px 26px 0px #DD8762
+        display: flex
+        gap:100px        
+        padding-top: 63px
+        padding-bottom: 66px
+        padding-left: 155px
+        padding-right: 155px
+    &__text
+        max-width: 465px
+        font-family: $poppins-sb
+        font-size: 29.946px
+        line-height: 135%
+        color: $black-color
+        letter-spacing: 0.299px
+    &__stat
+        flex-basis: 157px
+        display: flex
+        flex-direction: column
+        gap: 5px
+    &__rating        
+        display: flex
+        flex-direction: column
+        gap: 2px        
+    &__numbers
+        font-family: $poppins-sb
+        font-size: 53.903px
+        line-height: 100%
+        color: $black-color
+        letter-spacing: 0.539px
+    &__icons
+        padding-left: 6px    
+    &__caption
+        font-family: $poppins-sb
+        font-size: 14.628px
+        line-height: 100%
+        color: $black-color
+        letter-spacing: 0.146px
+        padding-left: 6px                     
+
+.questions
+    padding-bottom: 93px
+    max-width: 1070px
+    &__wrap
+        display: flex
+        flex-direction: column               
+    &__title
+      padding-bottom: 36px
+      align-self: center
+    &__subtitle
+        align-self: center
+        text-align: center
+        max-width: 567px
+        padding-bottom: 44px
+        font-family: $roboto-m
+        font-size: 16.67px
+        line-height: 126%
+        color: $black-color
+        letter-spacing: 0.5px        
+    &__list
+        display: grid
+        grid-template-columns: repeat(2, 1fr)    
+        row-gap: 18px
+        column-gap: 60px
+        padding-bottom: 19px
+    &__list-item-title    
+        font-family: $poppins-b
+        font-size: 17.977px
+        line-height: 148.2%
+        color: $black-color
+    &__form        
+        max-width: 1041px    
+
+.unlimited
+    max-width: 1246px
+    padding-top: 74px
+    padding-bottom: 58px
+    border-radius: 44px
+    background: linear-gradient(102deg, #F7E6CB 0%, #F5F2EB 100%)
+    box-shadow: 15px 15px 26px 0px #DD8762
+    margin-bottom: 113px
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 165px
+    &__content    
+        flex-basis: 500px
+    &__title
+        color: $black-color
+        padding-bottom: 15px
+    &__text
+        font-family: $poppins-m
+        font-size: 16.67px
+        line-height: 153.2%
+        letter-spacing: 0.5px
+        color: $dark-color-6
+    &__links-wrap
+        padding-top: 20px
+        padding-bottom: 21px
+        display: flex
+        gap: 10px
+    &__captions
+        font-family: $roboto-m
+        font-size: 11.351px
+        line-height: 153.2%        
+        color: $black-color
+        margin-bottom: 23px        
+    &__captions span:not(:last-child)
+        padding-right: 10px                 
+        border-right: 3px solid $bright-color-3
+    &__captions span:not(:first-child)
+        padding-left: 7px             
+
+.subscribe
+    padding-bottom: 43px
+    &__wrap
+        display: flex        
+        justify-content: center
+        gap:42px
+    &__left
+        flex-basis: 303px
+    &__logo
+        display: flex
+        align-items: baseline        
+        padding-bottom: 10px
+    &__logo-title
+        font-family: $istok
+        font-size: 27.696px
+        line-height: 100%
+        color: $dark-color-8 
+    &__text  
+        font-family: $poppins-m
+        font-size: 16.67px
+        line-height: 153.2%
+        color: $dark-color-6
+        padding-bottom: 17px
+    &__right
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__nav-wrap
+        display: flex
+        gap: 66px
+    &__nav-item
+    &__nav-title
+        font-family: $poppins-b
+        font-size: 14.933px
+        line-height: 153.2%
+        color: $black-color
+        padding-bottom: 15px
+    &__link-list
+      display: flex
+      flex-direction: column
+      gap: 7px
+    &__link         
+        font-family: $poppins-reg
+        font-size: 14.199px
+        line-height: 153.2%
+        color: $dark-color-6
+        position: relative
+        &::after
+            content: ""
+            position: absolute
+            bottom: -2px
+            left: 50%
+            height: 1px
+            width: 0%
+            transform: translate(-50%)
+            background: $dark-color-6
+            transition: width 0.4s ease  
+        &:hover
+            &::after
+                width: 100%
+                transition: width 0.4s ease             
+    &__form
+        padding-top: 47px
+        max-width: 590px

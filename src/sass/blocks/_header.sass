@@ -1,2 +1,48 @@
-header
-    background: $bright-color
+.header
+    background: $light-color
+    padding-top: 33px
+    display: flex
+    align-items: center
+    justify-content: center
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+        max-width: 830px
+        gap: 118px
+        padding-bottom: 5px
+    &__logo
+        display: flex
+        align-items: baseline
+    &__logo-title
+        font-family: $istok
+        font-size: 27.696px
+        line-height: 100%
+        color: $dark-color-8 
+    &__nav
+        display: flex
+        gap:16px
+    &__nav-item
+        font-family: $poppins-b
+        font-size: 13.714px
+        line-height: 100%        
+    &__link
+        display: flex
+        align-items: center
+        gap:3px
+        color:  $black-color
+        &:hover
+            color:  $bright-color-2
+            transition: color 0.4s ease 
+    &__link_pricing
+        padding-left: 10px
+        padding-right: 2px           
+    &__btn
+        border: 3px solid $bright-color-2
+        border-radius: 5px
+        padding: 5px 19px
+        color:  $black-color
+        &:hover
+            border-color: $dark-color-3
+            transition: border-color 0.4s ease 
+
