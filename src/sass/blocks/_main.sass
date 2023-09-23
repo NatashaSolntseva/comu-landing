@@ -131,8 +131,6 @@
             border-radius: 8px 8px 0px 0px
         &_size_small
             flex-basis: calc(100% - 148px)
-            // padding-top: 11px
-            // padding-bottom: 10px
             min-height: 41px
             padding-left: 18px
             font-size: 10px
@@ -167,8 +165,6 @@
         &_size_small
             flex-basis: 148px
             font-size: 14px
-            // padding-top: 10px
-            // padding-bottom: 9px
             min-height: 41px
             @include xxs
                     width: 100%
@@ -177,8 +173,6 @@
             flex-basis: 210px
             font-size: 21px
             min-height: 62px 
-            // padding-top: 18px
-            // padding-bottom: 18px
             @include xxs
                     width: 100%
                     flex-basis: 39px  
@@ -201,7 +195,7 @@
         background-position-x: center            
         padding-top: 70px
         padding-bottom: 198px        
-        @include sm
+        @include md
             width: calc(100% - 40px)                               
         @include xs
             padding-top: 50px
@@ -327,9 +321,10 @@
             flex-direction: column-reverse    
     &__content
         max-width: 389px
-        display: flex
-        flex-direction: column
-        gap: 18px
+        display: grid
+        grid-template-columns: 57px auto
+        column-gap: 15px
+        row-gap: 18px
     &__item
         display: flex
         gap:13px         
@@ -786,10 +781,11 @@
         padding-bottom: 66px
         padding-left: 155px
         padding-right: 155px
-        @include md
-            padding: 30px
-            gap: 0px
+        @include md            
+            gap: 15px
             justify-content: space-between
+        @include md
+            padding: 50px 100px    
         @include xs
             flex-direction: column
             align-items: center    
@@ -799,7 +795,7 @@
         max-width: 465px
         font-family: $poppins-sb
         font-size: 30px
-        line-height: 135%
+        line-height: 150%
         color: $black-color
         letter-spacing: 0.3px
         @include sm
@@ -990,6 +986,11 @@
         line-height: 153%
         color: $dark-color-6
         position: relative
+        display: inline-block
+        max-width: 104px
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
         &::after
             content: ""
             position: absolute
