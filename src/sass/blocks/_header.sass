@@ -1,6 +1,7 @@
 .header
     background: #fefbf0    
     padding-top: 33px
+    padding-bottom: 3px
     display: flex
     align-items: center
     justify-content: center
@@ -16,6 +17,7 @@
         gap: 118px
         padding-bottom: 5px
         @include sm
+            gap: 0px
             width: 90%
     &__logo
         display: flex
@@ -104,14 +106,14 @@
         top: 20px
         &:hover
             transform: scale(1.2)
-
     &__nav-list
         display: grid
         grid-template-columns: repeat(3, 1fr)
-        column-gap: 100px
+        column-gap: 80px
         row-gap: 30px
         @include xxs
             grid-template-columns: repeat(2, 1fr)
+            column-gap: 30px
     &__nav-list li 
         width: fit-content
         width: -webkit-fit-content
