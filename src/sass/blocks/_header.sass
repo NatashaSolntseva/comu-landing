@@ -1,10 +1,13 @@
 .header
-    //background: #fefbf0
-    background: #fcf5e3
+    background: #fefbf0    
     padding-top: 33px
     display: flex
     align-items: center
     justify-content: center
+    width: 100%
+    margin: 0 auto
+    @include xl
+        width: 1440px
     &__wrap 
         display: flex
         align-items: center
@@ -12,6 +15,8 @@
         max-width: 830px
         gap: 118px
         padding-bottom: 5px
+        @include sm
+            width: 90%
     &__logo
         display: flex
         align-items: baseline
@@ -19,10 +24,15 @@
         font-family: $istok
         font-size: 27.696px
         line-height: 100%
-        color: $dark-color-8 
+        color: $dark-color-8
     &__nav
+        @include sm
+            display: none       
+    &__nav-list
         display: flex
-        gap:16px
+        gap:14px
+        @include sm
+            display: none    
     &__nav-item
         font-family: $poppins-b
         font-size: 13.714px
@@ -30,7 +40,7 @@
     &__link
         display: flex
         align-items: center
-        gap:3px
+        gap:3.5px
         color:  $black-color
         &:hover
             color:  $bright-color-2
@@ -45,5 +55,65 @@
         color:  $black-color
         &:hover
             border-color: $dark-color-3
-            transition: border-color 0.4s ease 
+            transition: border-color 0.4s ease
+    &__burger-menu
+        display: none
+        width: 45px
+        height: 45px
+        background-image: url(../icons/menu.svg)
+        background-repeat: no-repeat
+        background-size: cover
+        background-color: #FE9C69
+        border-radius: 100%
+        border: none
+        cursor: pointer
+        &:hover
+            background-color: $dark-color-3
+            transition: background-color 0.4s ease
+        @include sm
+            display: block
+        @include xxs
+            width: 40px
+            height: 40px    
+
+.overlay
+    position: fixed
+    top: -100vh
+    left: 0
+    right: 0
+    background-color: rgba(0, 0, 0, 0.5)
+    height: 100vh
+    transition: var(--transition)
+    z-index: 70    
+
+.burger-menu
+    //background-color: $main-color
+    background:  linear-gradient(300deg, #F5F2EB 1.26%, #F7E6CB 100.49%)
+    box-shadow: 5px 5px 13px 0px #DD8762
+    padding-top: 47px
+    padding-bottom: 47px
+    position: relative
+    &__btn-close
+        background-image: url(../icons/close.svg)
+        background-repeat: no-repeat
+        display: block
+        width: 22px
+        height: 22px
+        position: absolute
+        right: 30px
+        top: 20px
+        &:hover
+            transform: scale(1.2)
+
+    &__nav-list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        column-gap: 100px
+        row-gap: 30px
+        @include xxs
+            grid-template-columns: repeat(2, 1fr)
+    &__nav-list li 
+        width: fit-content
+        width: -webkit-fit-content
+        width: -moz-fit-content    
 

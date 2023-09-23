@@ -32,15 +32,15 @@
     <link rel="stylesheet" href="css/style.min.css" />
     <title>COMU</title>
   </head>
-  <body>
+  <body>    
     <header class="header">
       <div class="container header__wrap">
         <a href="#" class="header__logo">
           <img src="icons/logo.svg" />
           <h1 class="header__logo-title">COMU</h1>
         </a>
-        <nav>
-          <ul class="header__nav">
+        <nav class="header__nav">
+          <ul class="header__nav-list">
             <li class="header__nav-item">
               <a href="#" class="header__link">
                 Home
@@ -72,35 +72,39 @@
             </li>
           </ul>
         </nav>
+        <button class="header__burger-menu" onclick="openBurgerMenu()"></button>
       </div>
     </header>
-    <main class="page">
+    <main class="page">      
       <section class="promo">
         <div class="promo__bg">
-          <div class="container promo__wrap">
-            <div class="promo__content">
-              <h2 class="section-title promo__title">
-                Share text, voice, photos, videos and GIFs files for free
-              </h2>
-              <p class="promo__text">
-                Feugiat primis a ligula undo auctor mauris auctor laoreet and
-                pretium augue an egestas cubilia
-              </p>
-              <div class="promo__links">
-                <a href="#" class="promo__btn">Learn More</a>
-                <a href="#" class="promo__link">
-                  <img src="icons/learn_more.svg" />
-                  <span class="">See OLMO in Action</span>
-                </a>
+          <div class="container">
+            <div class="promo__wrap">
+              <div class="promo__content">
+                <h2 class="section-title promo__title">
+                  Share text, voice, photos, videos and GIFs files for free
+                </h2>
+                <p class="promo__text">
+                  Feugiat primis a ligula undo auctor mauris auctor laoreet and
+                  pretium augue an egestas cubilia
+                </p>
+                <div class="promo__links">
+                  <a href="#" class="promo__btn">Learn More</a>
+                  <a href="#" class="promo__link">
+                    <img src="icons/learn_more.svg" />
+                    <span class="">See OLMO in Action</span>
+                  </a>
+                </div>
+                <div class="promo__info">
+                  <span class="promo__info-item">14 days free trial</span>
+                  <span class="promo__info-item">No credit card</span>
+                </div>
               </div>
-              <div class="promo__info">
-                <span class="promo__info-item">14 days free trial</span>
-                <span class="promo__info-item">No credit card</span>
+              <div class="promo__thump">
+                <img src="icons/promo__img.svg" />
               </div>
             </div>
-            <div class="promo__thump">
-              <img src="icons/promo__img.svg" />
-            </div>
+            
           </div>
         </div>        
       </section>
@@ -939,6 +943,52 @@
           </div>
         </div>         
     </footer>
+    <!--burger Menu-->
+    <div class="overlay" id="overlayBurgerMenu">
+      <div class="burger-menu">
+        <div class="container">
+          
+            <nav class="burger-menu__content">
+              <ul class="burger-menu__nav-list">
+                <li class="header__nav-item">
+                  <a href="#" class="header__link">
+                    Home
+                    <img src="icons/arrow_down.svg" />
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__link">
+                    About
+                    <img src="icons/arrow_down.svg" />
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__link">
+                    About
+                    <img src="icons/arrow_down.svg" />
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__link">
+                    Auth Pagea
+                    <img src="icons/arrow_down.svg" />
+                  </a>
+                </li>
+                <li class="header__nav-item"><a href="#" class="header__link">Features</a></li>
+                <li class="header__nav-item"><a href="#" class="header__link">Pricing</a></li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__btn">Get Started</a>
+                </li>
+              </ul>
+            </nav>
+          
+          <button
+            type="button"
+            class="btn burger-menu__btn-close"
+            onclick="closeBurgerMenu()"
+          ></button>
+        </div>
+      </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>
