@@ -152,8 +152,8 @@
         &_size_small
             flex-basis: 148px
             font-size: 14px
-            padding-top: 10.2px
-            padding-bottom: 9.5px
+            padding-top: 10px
+            padding-bottom: 9px
             @include xxs
                     width: 100%
                     flex-basis: 39px
@@ -168,37 +168,6 @@
         &:hover        
             background: $dark-color-9
             transition: background 0.4s ease            
-
-// .bg
-//     width: 100vw
-//     height: 60vh
-//     position: absolute
-//     top: 0
-//     left: 0
-//     background-color: transparent    
-//     &::before
-//         content: ""
-//         position: absolute
-//         width: 100%
-//         padding-top: 100%
-//         background: linear-gradient(178deg, #FFFBF0 4.22%, #F7E6CC 98.53%)
-//         border-radius: 0 0 60% 60% / 0 0 150px 150px
-//         bottom: 0px
-//         left: 0
-//         box-shadow: 0px 5px 26px #DD8762
-//         transform-origin: bottom center
-//         //transform: scaleY(2)
-//         z-index: -6  
-.bg
-    width: 100vw
-    height: 65vh
-    position: absolute
-    top: 0
-    left: 0
-    background: url('../img/gradient_bg.png') no-repeat
-    z-index: -6
-    background-position: center
-    background-size: 100%
 
 .promo
     width: 100%
@@ -423,6 +392,7 @@
         padding-bottom: 15px          
 
 .automation
+    width: 100%
     padding-bottom: 116px
     max-width: 1213px
     @include xxs
@@ -490,6 +460,7 @@
         color: $black-color                    
 
 .price
+    width: 100%
     padding-bottom: 80px
     @include sm
         padding-bottom: 0px
@@ -701,6 +672,7 @@
         padding-bottom: 25px
 
 .advantages
+    width: 100%
     padding-top: 120px  
     padding-bottom: 163px
     @include sm
@@ -768,6 +740,7 @@
         letter-spacing: 0.5px
 
 .stat
+    width: 100%
     padding-bottom: 104px
     @include xxs
         padding-bottom: 50px
@@ -880,6 +853,7 @@
         max-width: 1041px    
 
 .unlimited
+    width: 100%
     margin-bottom: 113px
     @include xxs
         margin-bottom: 50px
@@ -985,9 +959,9 @@
         color: $black-color
         padding-bottom: 15px
     &__link-list
-      display: flex
-      flex-direction: column
-      gap: 7px
+        display: flex
+        flex-direction: column
+        gap: 7px
     &__link         
         font-family: $poppins-reg
         font-size: 14px

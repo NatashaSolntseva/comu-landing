@@ -74,13 +74,21 @@ li
 
 a
     text-decoration: none
+    //голубые рамки на мобильном
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    -webkit-tap-highlight-color: transparent
     
 .container 
     max-width: 1246px
     margin: 0 auto
     padding: 0 20px
     @media(max-width: 576px) 
-        padding: 0 17px
+        padding: 0 15px
 
 .section-title
     font-family: $poppins-b
